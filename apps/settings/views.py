@@ -1,12 +1,17 @@
 from django.shortcuts import render
 
-from apps.settings.models import Setting, PhoneNumber, AboutUs, Teacher
+from apps.settings.models import Setting, PhoneNumber, AboutUs, Teacher, Benefits, Gallery, Review
 
 # Create your views here.
 def index(request):
     setting = Setting.objects.latest('id')
     about = AboutUs.objects.latest('id')
     phones = PhoneNumber.objects.filter(setting=setting.id)
+    benefits = Benefits.objects.all().order_by('?')
+    index_benefits_one = Benefits.objects.all()[:3]
+    index_benefits_two = Benefits.objects.all()[3:]
+    gallery = Gallery.objects.all().order_by('?')
+    reviews = Review.objects.all().order_by('?')
     return render(request, 'index.html', locals())
 
 def about(request):

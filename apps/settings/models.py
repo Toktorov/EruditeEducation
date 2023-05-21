@@ -1,4 +1,5 @@
 from django.db import models
+from django_resized.forms import ResizedImageField
 
 # Create your models here.
 class Setting(models.Model):
@@ -102,10 +103,12 @@ class Teacher(models.Model):
         max_length=255,
         verbose_name="Предмет"
     )
-    image = models.ImageField(
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
         upload_to='teams/',
         verbose_name="Фотография",
-        blank=True, null=True
+        blank = True, null = True
     )
 
     def __str__(self):
@@ -131,3 +134,47 @@ class Contact(models.Model):
     class Meta:
         verbose_name = "Контакт"
         verbose_name_plural = "Контакты"
+
+class Gallery(models.Model):
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='gallery_images/',
+        verbose_name="Основная фотография",
+        blank = True, null = True
+    )
+
+    def __str__(self):
+        return f"{self.image}"
+
+    class Meta:
+        verbose_name = "Галерея"
+        verbose_name_plural = "Галерии"
+
+class Review(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name="ФИО"
+    )
+    position = models.CharField(
+        max_length=255,
+        verbose_name="Должность"
+    )
+    text = models.CharField(
+        max_length=300,
+        verbose_name="Отзыв"
+    )
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='review_images/',
+        verbose_name="Основная фотография",
+        blank = True, null = True
+    )
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"

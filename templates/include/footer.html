@@ -4,7 +4,7 @@
       <div class="container">
         <div class="footer_widget_grid">
           <div class="site_logo">
-               <a class="site_link" href="index.html">
+               <a class="site_link" href="{% url 'index' %}">
               <img src="{{ setting.logo.url }}" alt="{{ setting.title }}" width="30%">
             </a>
           </div>
@@ -16,9 +16,9 @@
               </h4>
               <ul class="icon_list unordered_list_block">
                 <li>
-                  <a href="/cdn-cgi/l/email-protection#d7b4b8b9a3b6b4a397a7b6a5b6b3b8aff9b4b8ba">
+                  <a href="mailto:{{setting.email}}">
                     <span class="list_item_text">
-                      <span class="__cf_email__" data-cfemail="debdb1b0aabfbdaa9eaebfacbfbab1a6f0bdb1b3">[email&#160;protected]</span>
+                      <span class="__cf_email__" data-cfemail="debdb1b0aabfbdaa9eaebfacbfbab1a6f0bdb1b3">{{ setting.email }}</span>
                     </span>
                   </a>
                 </li>

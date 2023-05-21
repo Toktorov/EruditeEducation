@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.settings.models import Setting, PhoneNumber, AboutUs, Benefits, Contact, Teacher
+from apps.settings.models import Setting, PhoneNumber, AboutUs, Benefits, Contact, Teacher, Gallery, Review
 
 # Register your models here.
 @admin.register(Setting)
@@ -29,3 +29,13 @@ class BenefitsAdmin(admin.ModelAdmin):
 class TeacherAdmin(admin.ModelAdmin):
     list_display = ('name', 'subject')
     search_fields = ('name', 'subject')
+
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ('image', )
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('name', 'position', 'text')
+    search_fields = ('name', 'position', 'text')
+    list_per_page = 20
