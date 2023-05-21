@@ -1,0 +1,390 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+    <!-- Body Wrap - Start -->
+    <div class="page_wrapper">
+
+    <!-- Preloder start -->
+    <div id="preloader">
+      <div class="sk-three-bounce">
+          <div class="sk-child sk-bounce1"></div>
+          <div class="sk-child sk-bounce2"></div>
+          <div class="sk-child sk-bounce3"></div>
+      </div>
+    </div>
+    <!-- Preloder start -->
+
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas__info">
+          <div class="offcanvas__wrapper">
+              <div class="offcanvas__content">
+                <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                    <div class="offcanvas__logo">
+                      <a href="index.html">
+                      <img src="{{ setting.logo.url }}" alt="logo not found">
+                      </a>
+                    </div>
+                    <div class="offcanvas__close">
+                      <svg class="menu-close-btn" xmlns="http://www.w3.org/2000/svg" width="33.666" height="33.666" viewBox="0 0 33.666 33.666"><path d="m1.414 1.414 30.83763383 30.83763383"></path><path d="M1.414 32.252 32.25163383 1.41436617"></path></svg>
+                    </div>
+                </div>
+                <div class="mobile-menu fix mb-4"></div>
+                <div class="offcanvas__contact text-center">
+                    <h4 class="offcanvas__title">Contact Info</h4>
+                    <div class="offcanvas__contact-text mb-2">
+                      <p><a href="/cdn-cgi/l/email-protection#f68697849792998eb6938e979b869a93" target="_blank"><span class="__cf_email__" data-cfemail="e79786958683889fa7829f868a978b82c984888a">[email&#160;protected]</span></a></p>
+                      <span><a href="tel:725214456">725 214 456</a></span>
+                    </div>
+                    <div class="offcanvas__contact-text">
+                      <p><a target="_blank" href="https://www.google.com/maps">Folkungagatan 83, Stockholm, Sweden</a></p>
+                    </div>
+                </div>
+                <div class="offcanvas__devider"></div>
+                <div class="offcanvas__social">
+                    <ul>
+                      <li><a target="_blank" href="https://www.facebook.com">Facebook</a></li>
+                      <li><a target="_blank" href="https://www.instagram.com">Instagram</a></li>
+                      <li><a target="_blank" href="https://www.twitter.com">Twitter</a></li>
+                      <li><a target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay-white"></div>
+    <!-- Offcanvas area start -->
+
+      <!-- Site Header - Start
+      ================================================== -->
+      {% include 'include/header.html' %}
+      <!-- Site Header - End
+      ================================================== -->
+
+      <!-- Main Body - Start
+      ================================================== -->
+      <main class="page_content">
+
+        <!-- Page Section - Start
+        ================================================== -->
+        <section class="page_banner text-center">
+          <div class="container decoration_wrap">
+            <h1 class="page_title">Наши контакты</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+              <li><a href="{% url 'index' %}">Домой</a></li>
+              <li>Контакты</li>
+            </ul>
+
+            <div class="deco_item shape_1 wow fadeInUp" data-wow-delay=".1s">
+              <img src="{% static 'assets/images/shapes/shape_circle_1.svg' %}" data-parallax='{"y" : -140, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+            <div class="deco_item shape_2 wow rotateInDownRight" data-wow-delay=".1s">
+              <img src="{% static 'assets/images/shapes/shape_circle_half_1.svg' %}" data-parallax='{"y" : 200, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+            <div class="deco_item shape_3 wow fadeInDown">
+              <img src="{% static 'assets/images/shapes/shape_1.svg' %}" data-parallax='{"x" : -200, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+          </div>
+        </section>
+        <!-- Page Section - End
+        ================================================== -->
+
+        <!-- Contact Section - Start
+        ================================================== -->
+        <section class="contact_section section_space_lg">
+          <div class="container">
+            <div class="row">
+              <div class="col col-lg-6">
+                <div class="gmap_canvas mb-3 mb-lg-0">
+                  <!-- <iframe id="gmap_canvas_iframe" src="{{ setting.url_address }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
+                  <a class="dg-widget-link" href="http://2gis.kg/bishkek/firm/70000001023062333/center/74.63699340820314,42.81909280017388/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Бишкека</a><div class="dg-widget-link"><a href="http://2gis.kg/bishkek/firm/70000001023062333/photos/70000001023062333/center/74.63699340820314,42.81909280017388/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kg/bishkek/center/74.63699,42.818794/zoom/16/routeTab/rsType/bus/to/74.63699,42.818794╎ERUDITE ISIT, частная школа?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до ERUDITE ISIT, частная школа</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":42.81909280017388,"lon":74.63699340820314,"zoom":16},"opt":{"city":"bishkek"},"org":[{"id":"70000001023062333"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                </div>
+              </div>
+              <div class="col col-lg-6">
+                <div class="ps-xl-4">
+                  <div class="section_heading">
+                    <h2 class="heading_subtitle text-uppercase">
+                      <span class="double_icon">
+                        <i class="fas fa-sharp fa-square-full"></i>
+                        <i class="fas fa-sharp fa-square-full"></i>
+                      </span>
+                      <span>Наши контакты</span>
+                    </h2>
+                    <h3 class="heading_title mb-0">
+                      Get In Touch
+                    </h3>
+                  </div>
+                  <ul class="contact_info_list style_2 unordered_list_block">
+                    <li>
+                      <strong>Адрес:</strong>
+                      <span>{{ setting.address }}</span>
+                    </li>
+                    <li>
+                      <strong>Телефонный номер:</strong>
+                      <span><a href="tel:+1-202-555-0149">+1-202-555-0149</a></span>
+                    </li>
+                    <li>
+                      <strong>Почта:</strong>
+                      <span><a href="/cdn-cgi/l/email-protection#88ebe7e6fce9ebfcc8f8e9fae9ece7f0a6ebe7e5"><span class="__cf_email__" data-cfemail="43202c2d372220370333223122272c3b6d202c2e">[email&#160;protected]</span></a></span>
+                    </li>
+                    <li>
+                      <strong>Время работы:</strong>
+                      <span>10am - 6pm, Friday Close</span>
+                    </li>
+                    <li>
+                      <strong>Мы в социальных сетях:</strong>
+                      <ul class="social_icon unordered_list">
+                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section - End
+        ================================================== -->
+
+        <!-- Contact Form Section - Start
+        ================================================== -->
+        <section class="contact_form_section">
+          <div class="container">
+            <div class="contact_form_boxed bg_primary decoration_wrap">
+              <div class="contact_form p-0 bg-transparent rounded-0">
+                <div class="section_heading text-white">
+                  <h2 class="heading_subtitle text-uppercase">
+                    <span class="double_icon">
+                      <i class="fas fa-sharp fa-square-full"></i>
+                      <i class="fas fa-sharp fa-square-full"></i>
+                    </span>
+                    <span>Contact Us</span>
+                  </h2>
+                  <h3 class="heading_title mb-0">
+                    Get In Touch
+                  </h3>
+                </div>
+                <form action="#">
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <div class="form-group m-0">
+                        <input class="form-control" type="text" name="firstname" placeholder="First Name">
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group m-0">
+                        <input class="form-control" type="text" name="lastname" placeholder="Last Name">
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="form-group m-0">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address">
+                      </div>
+                    </div>
+                    <div class="col col-md-6">
+                      <div class="select_option m-0">
+                        <select>
+                          <option data-display="Subject">Select Subject</option>
+                          <option value="development">Website Development</option>
+                          <option value="design">UX/UI Design</option>
+                          <option value="development">App Development</option>
+                          <option value="editing">Video Editing</option>
+                          <option value="programming">Programming & Tech</option>
+                          <option value="business">Business Consuting</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <textarea class="form-control" name="message" placeholder="Write your Message"></textarea>
+                      </div>
+
+                      <button type="submit" class="bd-btn-link btn_warning">
+                        <span class="bd-button-content-wrapper">
+                          <span class="bd-button-icon">
+                           <i class="fa-light fa-arrow-right-long"></i>
+                          </span>
+                          <span class="pd-animation-flip">
+                             <span class="bd-btn-anim-wrapp">
+                                <span class="bd-button-text">Send Now</span>
+                                <span class="bd-button-text">Send Now</span>
+                             </span>
+                          </span>
+                        </span>
+                      </button>
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="deco_item shape_1 wow fadeInUp" data-wow-delay=".1s">
+                <img src="{% static 'assets/images/shapes/shape_comment.png' %}" data-parallax='{"y" : -140, "smoothness": 10}' alt=" Illustration">
+              </div>
+              <div class="deco_item shape_2 wow fadeInUp" data-wow-delay=".1s">
+                <img src="{% static 'assets/images/shapes/shape_man_1.png' %}" data-parallax='{"y" : 140, "smoothness": 10}' alt=" Illustration">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Form Section - End
+        ================================================== -->
+
+        <!-- Faq Section - Start
+        ================================================== -->
+        <section class="faq_section section_space_lg">
+          <div class="container">
+            <div class="row">
+              <div class="col col-lg-4">
+                <div class="section_heading mb-lg-0">
+                  <h2 class="heading_title">
+                    Need to know User Common Questions
+                  </h2>
+
+                  <a href="faq.html" class="bd-btn-link btn_primary">
+                    <span class="bd-button-content-wrapper">
+                       <span class="bd-button-icon">
+                        <i class="fa-light fa-arrow-right-long"></i>
+                       </span>
+                       <span class="pd-animation-flip">
+                          <span class="bd-btn-anim-wrapp">
+                             <span class="bd-button-text">Need to Know More</span>
+                             <span class="bd-button-text">Need to Know More</span>
+                          </span>
+                       </span> 
+                    </span>
+                 </a>
+                </div>
+              </div>
+              <div class="col col-lg-8">
+                <div class="accordion_wrap" id="faq_accordion">
+                  <div class="accordion_item">
+                    <h3 class="accordion_header m-0" id="heading_one">
+                      <button class="accordion_button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_one" aria-expanded="true" aria-controls="collapse_one">
+                        How much does a new website cost?
+                      </button>
+                    </h3>
+                    <div id="collapse_one" class="accordion-collapse collapse show" aria-labelledby="heading_one" data-bs-parent="#faq_accordion">
+                      <div class="accordion_body">
+                        <p class="m-0">
+                          Regular maintenance is essential for a website to stabilize its flexibility and reliability. Proper maintenance would help in ensuring your <a href="#!">website’s security</a>, invite new visitors, boost traffic and more. Of course, we can help you out with proper and professional website maintenance in addition to development as it supports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion_item">
+                    <h3 class="accordion_header m-0" id="heading_two">
+                      <button class="accordion_button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_two" aria-expanded="false" aria-controls="collapse_two">
+                        Will you maintain my site for me?
+                      </button>
+                    </h3>
+                    <div id="collapse_two" class="accordion-collapse collapse" aria-labelledby="heading_two" data-bs-parent="#faq_accordion">
+                      <div class="accordion_body">
+                        <p class="m-0">
+                          Regular maintenance is essential for a website to stabilize its flexibility and reliability. Proper maintenance would help in ensuring your <a href="#!">website’s security</a>, invite new visitors, boost traffic and more. Of course, we can help you out with proper and professional website maintenance in addition to development as it supports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion_item">
+                    <h3 class="accordion_header m-0" id="heading_three">
+                      <button class="accordion_button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_three" aria-expanded="false" aria-controls="collapse_three">
+                        Will my website be mobile-friendly?
+                      </button>
+                    </h3>
+                    <div id="collapse_three" class="accordion-collapse collapse" aria-labelledby="heading_three" data-bs-parent="#faq_accordion">
+                      <div class="accordion_body">
+                        <p class="m-0">
+                          Regular maintenance is essential for a website to stabilize its flexibility and reliability. Proper maintenance would help in ensuring your <a href="#!">website’s security</a>, invite new visitors, boost traffic and more. Of course, we can help you out with proper and professional website maintenance in addition to development as it supports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion_item">
+                    <h3 class="accordion_header m-0" id="heading_four">
+                      <button class="accordion_button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_four" aria-expanded="false" aria-controls="collapse_four">
+                        What if I need help on my site down the road?
+                      </button>
+                    </h3>
+                    <div id="collapse_four" class="accordion-collapse collapse" aria-labelledby="heading_four" data-bs-parent="#faq_accordion">
+                      <div class="accordion_body">
+                        <p class="m-0">
+                          Regular maintenance is essential for a website to stabilize its flexibility and reliability. Proper maintenance would help in ensuring your <a href="#!">website’s security</a>, invite new visitors, boost traffic and more. Of course, we can help you out with proper and professional website maintenance in addition to development as it supports
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Faq Section - End
+        ================================================== -->
+
+        <!-- Calltoaction Section - start
+        ================================================== -->
+        <div class="calltoaction_section style_1 bg_primary">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col col-lg-6 order-lg-last">
+                <div class="cta_image decoration_wrap">
+                  <img src="assets/images/calltoaction/cta_image_1.png" alt=" Call To Action Image">
+                  <div class="deco_item shape_1">
+                    <img class="wow zoomIn" data-wow-delay=".1s" src="assets/images/shapes/shape_circle_3.svg" alt=" Shape Image">
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-6">
+                <div class="cta_content">
+                  <div class="section_heading text-white">
+                    <h2 class="heading_subtitle text-uppercase">
+                      <span class="double_icon">
+                        <i class="fas fa-sharp fa-square-full"></i>
+                        <i class="fas fa-sharp fa-square-full"></i>
+                      </span>
+                      <span>Get In Touch</span>
+                    </h2>
+                    <h3 class="heading_title mb-30">
+                      Ready to Get Started A New Project ?
+                    </h3>
+                  </div>
+                  <a href="pricing.html" class="bd-btn-link btn_warning">
+                    <span class="bd-button-content-wrapper">
+                       <span class="bd-button-icon">
+                        <i class="fa-light fa-arrow-right-long"></i>
+                       </span>
+                       <span class="pd-animation-flip">
+                          <span class="bd-btn-anim-wrapp">
+                             <span class="bd-button-text">Get started</span>
+                             <span class="bd-button-text">Get started</span>
+                          </span>
+                       </span> 
+                    </span>
+                 </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <!-- Calltoaction Section - end
+        ================================================== -->
+
+      </main>
+      <!-- Main Body - End
+      ================================================== -->
+
+      <!-- Site Footer - Start
+      ================================================== -->
+      {% include 'include/footer.html' %}
+      <!-- Site Footer - End
+      ================================================== -->
+
+
+    </div>
+    <!-- Body Wrap - End -->
+
+{% endblock %}

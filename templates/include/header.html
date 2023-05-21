@@ -1,0 +1,78 @@
+{% load static %}
+<header class="site_header site_header_1">
+    <div class="container">
+      <div class="header_wrapper">
+        <div class="site_logo">
+             <a class="site_link" href="{% url 'index' %}">
+            <img src="{{ setting.logo.url }}" alt="{{ setting.title }}" width="20%">
+          </a>
+        </div>
+        <div class="mean__menu-wrapper d-none d-lg-block">
+          <div class="main-menu">
+             <nav id="mobile-menu">
+                <ul>
+                  <li>
+                    <a href="{% url 'index' %}">Домой</a>
+                  </li>
+                   
+                  <li>
+                    <a href="{% url 'about' %}">О нас</a>
+                  </li>
+                  <li>
+                  <a href="contact.html">Преимущества</a>
+                  </li>
+                   
+                  <li>
+                      <a href="{% url 'contact' %}">Контакты</a>
+                  </li>
+                  
+                  <li><a href="{{ setting.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="{{ setting.whatsapp }}"><i class="fab fa-whatsapp"></i></a></li>
+                  <li><a href="{{ setting.facebook }}"><i class="fab fa-facebook"></i></a></li>
+                   
+                </ul>
+             </nav>
+             <!-- for wp -->
+            
+          </div>
+       </div>
+       <div class="header_right">
+        <ul class="header_btns_group unordered_list_end d-none d-lg-flex">
+          <li>
+            <div class="select_option m-0">
+              <div class="icon_wrap">
+                <img src="{% static 'assets/images/icons/icon_globe.svg' %}" alt="Globe Icon">
+              </div>
+              <select>
+                <option value="english" selected>Русский</option>
+                <option value="arabic">Английский</option>
+                <option value="portuguese">Кыргызча</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <a href="contact.html" class="bd-btn-link outline-dark">
+              <span class="bd-button-content-wrapper">
+                 <span class="pd-animation-flip">
+                    <span class="bd-btn-anim-wrapp">
+                       <span class="bd-button-text">Записаться</span>
+                       <span class="bd-button-text">Записаться</span>
+                    </span>
+                 </span> 
+              </span>
+           </a>
+          </li>
+        </ul>
+        <div class="offcanvas-toggle d-lg-none">
+          <a class="bar-icon" href="javascript:void(0)">
+             <span></span>
+             <span>
+              <small></small>
+             </span>
+             <span></span>
+          </a>
+       </div>
+      </div>
+      </div>
+    </div>
+  </header>

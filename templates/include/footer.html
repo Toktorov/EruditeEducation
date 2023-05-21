@@ -1,0 +1,70 @@
+{% load static %}
+<footer class="site_footer style_1">
+    <div class="footer_widget_area bg_dark_3">
+      <div class="container">
+        <div class="footer_widget_grid">
+          <div class="site_logo">
+               <a class="site_link" href="index.html">
+              <img src="{{ setting.logo.url }}" alt="{{ setting.title }}" width="30%">
+            </a>
+          </div>
+          <div class="footer_widget">
+            <h3 class="footer_widget_title">Связаться с нами</h3>
+            <div class="icon_list_widget">
+              <h4 class="widget_title mb-0">
+                Если у вас есть вопросы:
+              </h4>
+              <ul class="icon_list unordered_list_block">
+                <li>
+                  <a href="/cdn-cgi/l/email-protection#d7b4b8b9a3b6b4a397a7b6a5b6b3b8aff9b4b8ba">
+                    <span class="list_item_text">
+                      <span class="__cf_email__" data-cfemail="debdb1b0aabfbdaa9eaebfacbfbab1a6f0bdb1b3">[email&#160;protected]</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_widget">
+            <h3 class="footer_widget_title">Наш адрес</h3>
+            <div class="icon_list_widget">
+              <ul class="icon_list unordered_list_block">
+                <li>
+                  <div class="w-location mb-2">
+                    <img src="{% static 'assets/images/icons/icon_mapmark.svg' %}" alt="Icon Mapmark">
+                  </div>
+                  <a target="_blank" href="https://www.google.com/maps">
+                    <span class="list_item_text">
+                      Кыргызстан, Бишкек <small class="d-md-block">{{ setting.address }}</small>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom bg_dark_3">
+      <div class="container">
+        <div class="footer_bottom_grid">
+          <div class="copyright_widget">
+            © 2023 {{ setting.title }} & <a target="_blank" href="https://www.instagram.com/codexx_studio/"><u>Codex Studio</u></a> Все права защищены.
+          </div>
+          <div class="backtotop style_1">
+            <a href="#" class="scroll">
+              <i class="fal fa-chevron-up"></i>
+            </a>
+          </div>
+          <div class="footer_social">
+            <ul class="social_icon unordered_list_end">
+              <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
+              <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

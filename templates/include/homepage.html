@@ -1,0 +1,100 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Частная школа Бишкек {{setting.title}}">
+    <meta name="keywords" content="Частная школа Бишкек, Школа Бишкек, Erudite, Erudite KG">
+    <meta name="author" content="Erudite">
+    <title> {{ setting.title }}</title>
+    <link rel="shortcut icon" href="{{ setting.logo.url }}">
+
+    <!-- Fraimwork - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!-- Icon Font - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/fontawesome-pro.css' %}">
+
+    <!-- Animation - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}">
+
+    <!-- Meanmenu - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/meanmenu.min.css' %}">
+
+    <!-- Cursor - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/cursor.css' %}">
+
+    <!-- Carousel - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick-theme.css' %}">
+
+    <!-- Video & Image Popup - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/magnific-popup.css' %}">
+
+    <!-- Select - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/nice-select.css' %}">
+
+    <!-- Counter - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/odometer.css' %}">
+
+    <!-- Custom - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    
+  </head>
+
+  <body>
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Fraimwork - Jquery Include -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-dropdown-ml-hack.js' %}"></script>
+
+    <!-- animation - jquery include -->
+    <!-- <script src="{% static 'assets/js/cursor.js' %}"></script> -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/tilt.min.js' %}"></script>
+    <script src="{% static 'assets/js/parallax.min.js' %}"></script>
+    <script src="{% static 'assets/js/parallax-scroll.js' %}"></script>
+
+    <!-- Carousel - Jquery Include -->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+    <!-- Video & Image Popup - Jquery Include -->
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+
+    <!-- Select - Jquery Include -->
+    <script src="{% static 'assets/js/nice-select.min.js' %}"></script>
+    
+    <!-- Counter - Jquery Include -->
+    <script src="{% static 'assets/js/appear.js' %}"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+
+    <!-- Isotope Filter - Jquery Include -->
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+
+    <!-- Meanmenu Filter - Jquery Include -->
+    <script src="{% static 'assets/js/meanmenu.min.js' %}"></script>
+
+    <!-- Masonry - Jquery Include -->
+    <script src="{% static 'assets/js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <!-- Countdown Timer - jquery include -->
+    <script src="{% static 'assets/js/countdown.js' %}"></script>
+
+    <!-- Type - jquery include -->
+    <script src="{% static 'assets/js/type.js' %}"></script>
+
+    <!-- Setting - jquery include -->
+    <script src="{% static 'assets/js/setting.js' %}"></script>
+
+    <!-- Custom - Jquery Include -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+  </body>
+</html>
