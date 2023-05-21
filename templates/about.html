@@ -15,46 +15,7 @@
     <!-- Preloder start -->
 
     <!-- Offcanvas area start -->
-    <div class="fix">
-        <div class="offcanvas__info">
-          <div class="offcanvas__wrapper">
-              <div class="offcanvas__content">
-                <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
-                    <div class="offcanvas__logo">
-                      <a href="index.html">
-                      <img src="{% static 'assets/images/logo/site_logo_white.svg' %}" alt="logo not found">
-                      </a>
-                    </div>
-                    <div class="offcanvas__close">
-                      <svg class="menu-close-btn" xmlns="http://www.w3.org/2000/svg" width="33.666" height="33.666" viewBox="0 0 33.666 33.666"><path d="m1.414 1.414 30.83763383 30.83763383"></path><path d="M1.414 32.252 32.25163383 1.41436617"></path></svg>
-                    </div>
-                </div>
-                <div class="mobile-menu fix mb-4"></div>
-                <div class="offcanvas__contact text-center">
-                    <h4 class="offcanvas__title">Contact Info</h4>
-                    <div class="offcanvas__contact-text mb-2">
-                      <p><a href="/cdn-cgi/l/email-protection#7f0f1e0d1e1b10073f1a071e120f131a" target="_blank"><span class="__cf_email__" data-cfemail="e69687948782899ea6839e878b968a83c885898b">[email&#160;protected]</span></a></p>
-                      <span><a href="tel:725214456">725 214 456</a></span>
-                    </div>
-                    <div class="offcanvas__contact-text">
-                      <p><a target="_blank" href="https://www.google.com/maps">Folkungagatan 83, Stockholm, Sweden</a></p>
-                    </div>
-                </div>
-                <div class="offcanvas__devider"></div>
-                <div class="offcanvas__social">
-                    <ul>
-                      <li><a target="_blank" href="https://www.facebook.com">Facebook</a></li>
-                      <li><a target="_blank" href="https://www.instagram.com">Instagram</a></li>
-                      <li><a target="_blank" href="https://www.twitter.com">Twitter</a></li>
-                      <li><a target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
-                    </ul>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-    <div class="offcanvas__overlay"></div>
-    <div class="offcanvas__overlay-white"></div>
+    {% include 'include/mobile_header.html' %}
     <!-- Offcanvas area start -->
 
       <!-- Site Header - Start
@@ -222,6 +183,62 @@
           </div>
         </section>
         <!-- Counter Section - End
+        ================================================== -->
+
+        <!-- Team Section - Start
+        ================================================== -->
+        <section class="team_section section_space_lg">
+          <div class="container">
+            <div class="section_heading text-center">
+              <h2 class="heading_subtitle text-uppercase">
+                <span class="double_icon">
+                  <i class="fas fa-sharp fa-square-full"></i>
+                  <i class="fas fa-sharp fa-square-full"></i>
+                </span>
+                <span>Команда школы {{ setting.title }}</span>
+              </h2>
+              <h3 class="heading_title mb-0">
+                Наша команда
+              </h3>
+            </div>
+
+            <div class="row justify-content-center">
+              {% for teacher in teachers %}
+              <div class="col col-xl-3 col-lg-6 col-md-6">
+                <div class="team_item style_1 tilt">
+                  <div class="admin_thumbnail">
+                    <div class="thumbnail_wrap">
+                      <img src="{{ teacher.image.url }}" alt="teacher image">
+                    </div>
+                  </div>
+                  <div class="admin_info_content">
+                    <h3 class="admin_name">{{ teacher.name }}</h3>
+                    <p class="admin_designation mb-0">{{ teacher.subject }}</p>
+                    
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- <div class="btn_wrap pb-0 text-center">
+              <a href="team.html" class="bd-btn-link btn_primary">
+                <span class="bd-button-content-wrapper">
+                   <span class="bd-button-icon">
+                    <i class="fa-light fa-arrow-right-long"></i>
+                   </span>
+                   <span class="pd-animation-flip">
+                      <span class="bd-btn-anim-wrapp">
+                         <span class="bd-button-text">View All Member</span>
+                         <span class="bd-button-text">View All Member</span>
+                      </span>
+                   </span> 
+                </span>
+             </a>
+            </div> -->
+          </div>
+        </section>
+        <!-- Team Section - End
         ================================================== -->
 
         <!-- About Section 2 - Start
@@ -518,117 +535,7 @@
         <!-- Starter Steps Section - End
         ================================================== -->
 
-        <!-- Team Section - Start
-        ================================================== -->
-        <section class="team_section section_space_lg">
-          <div class="container">
-            <div class="section_heading text-center">
-              <h2 class="heading_subtitle text-uppercase">
-                <span class="double_icon">
-                  <i class="fas fa-sharp fa-square-full"></i>
-                  <i class="fas fa-sharp fa-square-full"></i>
-                </span>
-                <span>Our Team</span>
-              </h2>
-              <h3 class="heading_title mb-0">
-                Our Team Members
-              </h3>
-            </div>
-
-            <div class="row justify-content-center">
-              <div class="col col-xl-3 col-lg-6 col-md-6">
-                <div class="team_item style_1 tilt">
-                  <div class="admin_thumbnail">
-                    <div class="thumbnail_wrap">
-                      <img src="{% static 'assets/images/team/team_admin_image_1.png' %}" alt=" Team Admin Image">
-                    </div>
-                  </div>
-                  <div class="admin_info_content">
-                    <h3 class="admin_name">Gary M. Martin</h3>
-                    <p class="admin_designation mb-0">Sr. Product Manager</p>
-                    <ul class="admin_social unordered_list">
-                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-xl-3 col-lg-6 col-md-6">
-                <div class="team_item style_1 tilt">
-                  <div class="admin_thumbnail">
-                    <div class="thumbnail_wrap">
-                      <img src="{% static 'assets/images/team/team_admin_image_2.png' %}" alt=" Team Admin Image">
-                    </div>
-                  </div>
-                  <div class="admin_info_content">
-                    <h3 class="admin_name">Karen L. Head</h3>
-                    <p class="admin_designation mb-0">Sr. Digital Marketer</p>
-                    <ul class="admin_social unordered_list">
-                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-xl-3 col-lg-6 col-md-6">
-                <div class="team_item style_1 tilt">
-                  <div class="admin_thumbnail">
-                    <div class="thumbnail_wrap">
-                      <img src="{% static 'assets/images/team/team_admin_image_3.png' %}" alt=" Team Admin Image">
-                    </div>
-                  </div>
-                  <div class="admin_info_content">
-                    <h3 class="admin_name">Daniel S. Anson</h3>
-                    <p class="admin_designation mb-0">Sr. UI/UX Designer</p>
-                    <ul class="admin_social unordered_list">
-                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-xl-3 col-lg-6 col-md-6">
-                <div class="team_item style_1 tilt">
-                  <div class="admin_thumbnail">
-                    <div class="thumbnail_wrap">
-                      <img src="{% static 'assets/images/team/team_admin_image_4.png' %}" alt=" Team Admin Image">
-                    </div>
-                  </div>
-                  <div class="admin_info_content">
-                    <h3 class="admin_name">William P. Robinson</h3>
-                    <p class="admin_designation mb-0">Sr. Developer</p>
-                    <ul class="admin_social unordered_list">
-                      <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="btn_wrap pb-0 text-center">
-              <a href="team.html" class="bd-btn-link btn_primary">
-                <span class="bd-button-content-wrapper">
-                   <span class="bd-button-icon">
-                    <i class="fa-light fa-arrow-right-long"></i>
-                   </span>
-                   <span class="pd-animation-flip">
-                      <span class="bd-btn-anim-wrapp">
-                         <span class="bd-button-text">View All Member</span>
-                         <span class="bd-button-text">View All Member</span>
-                      </span>
-                   </span> 
-                </span>
-             </a>
-            </div>
-          </div>
-        </section>
-        <!-- Team Section - End
-        ================================================== -->
+        
 
         <!-- Calltoaction Section - start
         ================================================== -->

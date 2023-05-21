@@ -1,0 +1,41 @@
+<div class="fix">
+    <div class="offcanvas__info">
+      <div class="offcanvas__wrapper">
+          <div class="offcanvas__content">
+            <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                <div class="offcanvas__logo">
+                  <a href="{% url 'index' %}">
+                  <img src="{{ setting.logo.url }}" alt="logo not found" width="30%">
+                  </a>
+                </div>
+                <div class="offcanvas__close">
+                  <svg class="menu-close-btn" xmlns="http://www.w3.org/2000/svg" width="33.666" height="33.666" viewBox="0 0 33.666 33.666"><path d="m1.414 1.414 30.83763383 30.83763383"></path><path d="M1.414 32.252 32.25163383 1.41436617"></path></svg>
+                </div>
+                </div>
+            </div>
+            <div class="mobile-menu fix mb-4"></div>
+            <div class="offcanvas__contact text-center">
+                <h4 class="offcanvas__title">Наши контакты:</h4>
+                <div class="offcanvas__contact-text mb-2">
+                  <p><a href="/cdn-cgi/l/email-protection#6212031003060d1a22071a030f120e07" target="_blank"><span class="__cf_email__" data-cfemail="4d3d2c3f2c2922350d28352c203d2128632e2220">{{ setting.email }}</span></a></p>
+                  {% for phone in phones %}
+                  <span><a href="tel:{{phone.phone}}">{{phone.phone}}</a></span>
+                  {% endfor %}
+                </div>
+                <div class="offcanvas__contact-text">
+                  <p><a target="_blank" href="https://www.google.com/maps">{{ setting.address }}</a></p>
+                </div>
+            </div>
+            <div class="offcanvas__devider"></div>
+            <div class="offcanvas__social">
+                <ul>
+                    <li><a target="_blank" href="{{ setting.instagram }}">Instagram</a></li>
+                    <li><a target="_blank" href="{{ setting.whatsapp }}">WhatsApp</a></li>
+                  <li><a target="_blank" href="{{ setting.facebook }}">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class="offcanvas__overlay"></div>
+<div class="offcanvas__overlay-white"></div>

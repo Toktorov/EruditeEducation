@@ -75,3 +75,59 @@ class AboutUs(models.Model):
     class Meta:
         verbose_name = "О нас"
         verbose_name_plural = "О нас"
+
+class Benefits(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Заголовок"
+    )
+    description = models.CharField(
+        max_length=300,
+        verbose_name="Описание"
+    )
+
+    def __str__(self):
+        return self.title 
+    
+    class Meta:
+        verbose_name = "Преимущество"
+        verbose_name_plural = "Преимущества"
+
+class Teacher(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name="ФИО"
+    )
+    subject = models.CharField(
+        max_length=255,
+        verbose_name="Предмет"
+    )
+    image = models.ImageField(
+        upload_to='teams/',
+        verbose_name="Фотография",
+        blank=True, null=True
+    )
+
+    def __str__(self):
+        return self.name 
+    
+    class Meta:
+        verbose_name = "Учитель"
+        verbose_name_plural = "Учителя"
+
+class Contact(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name="Имя"
+    )
+    phone = models.CharField(
+        max_length=255,
+        verbose_name="Телефонный номер"
+    )
+
+    def __str__(self):
+        return self.name 
+    
+    class Meta:
+        verbose_name = "Контакт"
+        verbose_name_plural = "Контакты"

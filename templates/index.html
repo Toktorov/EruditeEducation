@@ -12,46 +12,7 @@
     <!-- Preloder start -->
 
     <!-- Offcanvas area start -->
-    <div class="fix">
-        <div class="offcanvas__info">
-          <div class="offcanvas__wrapper">
-              <div class="offcanvas__content">
-                <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
-                    <div class="offcanvas__logo">
-                      <a href="{% url 'index' %}">
-                      <img src="{{ setting.logo.url }}" alt="logo not found" width="30%">
-                      </a>
-                    </div>
-                    <div class="offcanvas__close">
-                      <svg class="menu-close-btn" xmlns="http://www.w3.org/2000/svg" width="33.666" height="33.666" viewBox="0 0 33.666 33.666"><path d="m1.414 1.414 30.83763383 30.83763383"></path><path d="M1.414 32.252 32.25163383 1.41436617"></path></svg>
-                    </div>
-                    </div>
-                </div>
-                <div class="mobile-menu fix mb-4"></div>
-                <div class="offcanvas__contact text-center">
-                    <h4 class="offcanvas__title">Наши контакты:</h4>
-                    <div class="offcanvas__contact-text mb-2">
-                      <p><a href="/cdn-cgi/l/email-protection#6212031003060d1a22071a030f120e07" target="_blank"><span class="__cf_email__" data-cfemail="4d3d2c3f2c2922350d28352c203d2128632e2220">[email&#160;protected]</span></a></p>
-                      <span><a href="tel:725214456">725 214 456</a></span>
-                    </div>
-                    <div class="offcanvas__contact-text">
-                      <p><a target="_blank" href="https://www.google.com/maps">{{ setting.address }}</a></p>
-                    </div>
-                </div>
-                <div class="offcanvas__devider"></div>
-                <div class="offcanvas__social">
-                    <ul>
-                      <li><a target="_blank" href="https://www.facebook.com">Facebook</a></li>
-                      <li><a target="_blank" href="https://www.instagram.com">Instagram</a></li>
-                      <li><a target="_blank" href="https://www.twitter.com">Twitter</a></li>
-                      <li><a target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-      </div>
-    <div class="offcanvas__overlay"></div>
-    <div class="offcanvas__overlay-white"></div>
+    {% include 'include/mobile_header.html' %}
     <!-- Offcanvas area start -->
 
     <!-- Body Wrap - Start -->
@@ -80,10 +41,10 @@
                     <img src="{% static 'assets/images/shapes/shape_circle_half_1.svg' %}" data-parallax='{"y" : 200, "smoothness": 10}' alt=" Shape Image">
                   </div>
                   <div class="deco_item shape_5 wow zoomIn" data-wow-delay=".3s">
-                    <img src="{% static 'assets/images/shapes/shape_circle_2.svg' %}" alt=" Shape Image">
+                    <img src="{% static 'assets/images/shapes/shape_circle_2.svg' %}" alt="Shape Image">
                   </div>
                   <div class="deco_item shape_6">
-                    <img src="{% static 'assets/images/shapes/shape_circle_half_2.svg' %}" alt=" Shape Image">
+                    <img src="{% static 'assets/images/shapes/shape_circle_half_2.svg' %}" alt="Shape Image">
                   </div>
                 </div>
               </div>
@@ -98,15 +59,20 @@
                       <span>{{ setting.title }}</span>
                     </h2>
                     <h3 class="heading_title">
-                      Частная школа Бишкек <span><img class="focus_text" src="{% static 'assets/images/shapes/shape_line.svg' %}" alt=""> {{ setting.title }}</span>
+                      Частная школа <span><img class="focus_text" src="{% static 'assets/images/shapes/shape_line.svg' %}" alt=""> {{ setting.title }}</span>
                     </h3>
                     <p class="heading_description mb-0">
                       {{ setting.description }}
                     </p>
+                    <!-- {% for phone in phones %}
+                    <p class="heading_description mb-0">
+                      {{ phone.phone }}
+                    </p>
+                    {% endfor %} -->
                   </div>
                   <ul class="btns_group unordered_list">
                     <li>
-                      <a href="contact.html" class="bd-btn-link btn_primary">
+                      <a href="{% url 'client_form' %}" class="bd-btn-link btn_primary">
                         <span class="bd-button-content-wrapper">
                            <span class="bd-button-icon">
                             <i class="fa-light fa-arrow-right-long"></i>
@@ -121,7 +87,7 @@
                      </a>
                     </li>
                     <li>
-                      <a href="about.html" class="bd-btn-link outline-dark">
+                      <a href="{% url 'about' %}" class="bd-btn-link outline-dark">
                         <span class="bd-button-content-wrapper">
                            <span class="bd-button-icon">
                             <i class="fa-light fa-arrow-right-long"></i>
@@ -232,7 +198,7 @@
                   <div class="btn_wrap pb-0">
                     <ul class="btns_group unordered_list">
                       <li>
-                        <a href="about.html" class="bd-btn-link btn_primary">
+                        <a href="{% url 'about' %}" class="bd-btn-link btn_primary">
                           <span class="bd-button-content-wrapper">
                              <span class="bd-button-icon">
                               <i class="fa-light fa-arrow-right-long"></i>
@@ -633,7 +599,7 @@
                   </h3>
                 </div>
                 <div class="col col-lg-6 d-none d-lg-block text-lg-end">
-                  <a href="portfolio.html" class="bd-btn-link btn_primary">
+                  <a href="{% url 'client_form' %}" class="bd-btn-link btn_primary">
                     <span class="bd-button-content-wrapper">
                        <span class="bd-button-icon">
                         <i class="fa-light fa-arrow-right-long"></i>

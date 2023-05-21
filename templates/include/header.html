@@ -30,6 +30,9 @@
                   <li><a href="{{ setting.whatsapp }}"><i class="fab fa-whatsapp"></i></a></li>
                   <li><a href="{{ setting.facebook }}"><i class="fab fa-facebook"></i></a></li>
                    
+                  <!-- <li>
+                    <a href="{% url 'contact' %}">C 08:00-19:00</a>
+                </li> -->
                 </ul>
              </nav>
              <!-- for wp -->
@@ -51,7 +54,7 @@
             </div>
           </li>
           <li>
-            <a href="contact.html" class="bd-btn-link outline-dark">
+            <a href="{% url 'client_form' %}" class="bd-btn-link outline-dark">
               <span class="bd-button-content-wrapper">
                  <span class="pd-animation-flip">
                     <span class="bd-btn-anim-wrapp">
@@ -61,6 +64,7 @@
                  </span> 
               </span>
            </a>
+           
           </li>
         </ul>
         <div class="offcanvas-toggle d-lg-none">
