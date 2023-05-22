@@ -18,6 +18,8 @@ def about(request):
     setting = Setting.objects.latest('id')
     about = AboutUs.objects.latest('id')
     teachers = Teacher.objects.all()
+    index_benefits_one = Benefits.objects.all()[:3]
+    index_benefits_two = Benefits.objects.all()[3:]
     return render(request, 'about.html', locals())
 
 def contact(request):
@@ -29,3 +31,9 @@ def contact(request):
 def client_form(request):
     setting = Setting.objects.latest('id')
     return render(request, 'client_form.html', locals())
+
+def benefits(request):
+    setting = Setting.objects.latest('id')
+    benefits = Benefits.objects.all().order_by('?')
+    reviews = Review.objects.all().order_by('?')
+    return render(request, 'benefits.html', locals())

@@ -87,39 +87,31 @@
                   <div class="row">
                     <div class="col col-md-6">
                       <ul class="icon_list unordered_list_block">
+                        {% for benefit in index_benefits_one %}
                         <li>
                           <span class="list_item_icon">
                             <i class="fas fa-check"></i>
                           </span>
-                          <span class="list_item_text">Comprehensive Analysis</span>
+                          <span class="list_item_text">{{ benefit.title }}</span>
                         </li>
-                        <li>
-                          <span class="list_item_icon">
-                            <i class="fas fa-check"></i>
-                          </span>
-                          <span class="list_item_text">Mobile Friendly Web app</span>
-                        </li>
+                        {% endfor %}
                       </ul>
                     </div>
                     <div class="col col-md-6">
                       <ul class="icon_list unordered_list_block">
+                        {% for benefit in index_benefits_two %}
                         <li>
                           <span class="list_item_icon">
                             <i class="fas fa-check"></i>
                           </span>
-                          <span class="list_item_text">Well Designed Web App</span>
+                          <span class="list_item_text">{{ benefit.title }}</span>
                         </li>
-                        <li>
-                          <span class="list_item_icon">
-                            <i class="fas fa-check"></i>
-                          </span>
-                          <span class="list_item_text">High Performance & Speed</span>
-                        </li>
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>
                   <div class="btn_wrap">
-                    <a href="service.html" class="bd-btn-link btn_primary">
+                    <a href="{% url 'client_form' %}" class="bd-btn-link btn_primary">
                       <span class="bd-button-content-wrapper">
                          <span class="bd-button-icon">
                           <i class="fa-light fa-arrow-right-long"></i>
@@ -539,49 +531,7 @@
 
         <!-- Calltoaction Section - start
         ================================================== -->
-        <div class="calltoaction_section style_1 bg_primary">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col col-lg-6 order-lg-last">
-                <div class="cta_image decoration_wrap">
-                  <img src="{% static 'assets/images/calltoaction/cta_image_1.png' %}" alt=" Call To Action Image">
-                  <div class="deco_item shape_1">
-                    <img class="wow zoomIn" data-wow-delay=".1s" src="{% static 'assets/images/shapes/shape_circle_3.svg' %}" alt=" Shape Image">
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-6">
-                <div class="cta_content">
-                  <div class="section_heading text-white">
-                    <h2 class="heading_subtitle text-uppercase">
-                      <span class="double_icon">
-                        <i class="fas fa-sharp fa-square-full"></i>
-                        <i class="fas fa-sharp fa-square-full"></i>
-                      </span>
-                      <span>Get In Touch</span>
-                    </h2>
-                    <h3 class="heading_title mb-30">
-                      Ready to Get Started A New Project ?
-                    </h3>
-                  </div>
-                  <a href="pricing.html" class="bd-btn-link btn_warning">
-                    <span class="bd-button-content-wrapper">
-                       <span class="bd-button-icon">
-                        <i class="fa-light fa-arrow-right-long"></i>
-                       </span>
-                       <span class="pd-animation-flip">
-                          <span class="bd-btn-anim-wrapp">
-                             <span class="bd-button-text">Get started</span>
-                             <span class="bd-button-text">Get started</span>
-                          </span>
-                       </span> 
-                    </span>
-                 </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
+        {% include 'include/client_form.html' %}    
         <!-- Calltoaction Section - end
         ================================================== -->
 

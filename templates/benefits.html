@@ -1,0 +1,179 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+    <!-- Body Wrap - Start -->
+    <div class="page_wrapper">
+
+    <!-- Preloder start -->
+    <div id="preloader">
+      <div class="sk-three-bounce">
+          <div class="sk-child sk-bounce1"></div>
+          <div class="sk-child sk-bounce2"></div>
+          <div class="sk-child sk-bounce3"></div>
+      </div>
+    </div>
+    <!-- Preloder start -->
+
+    <!-- Offcanvas area start -->
+    {% include 'include/mobile_header.html' %}
+    <!-- Offcanvas area start -->
+
+      <!-- Site Header - Start
+      ================================================== -->
+      {% include 'include/header.html' %}
+      <!-- Site Header - End
+      ================================================== -->
+
+      <!-- Main Body - Start
+      ================================================== -->
+      <main class="page_content">
+
+        <!-- Page Section - Start
+        ================================================== -->
+        <section class="page_banner text-center">
+          <div class="container decoration_wrap">
+            <h1 class="page_title">Наши преимущества</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+              <li><a href="index.html">Домой</a></li>
+              <li>Преимущества</li>
+            </ul>
+
+            <div class="deco_item shape_1 wow fadeInUp" data-wow-delay=".1s">
+              <img src="{% static 'assets/images/shapes/shape_circle_1.svg' %}" data-parallax='{"y" : -140, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+            <div class="deco_item shape_2 wow rotateInDownRight" data-wow-delay=".1s">
+              <img src="{% static 'assets/images/shapes/shape_circle_half_1.svg' %}" data-parallax='{"y" : 200, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+            <div class="deco_item shape_3 wow fadeInDown">
+              <img src="{% static 'assets/images/shapes/shape_1.svg' %}" data-parallax='{"x" : -200, "smoothness": 10}' alt=" - Shape Image">
+            </div>
+          </div>
+        </section>
+        <!-- Page Section - End
+        ================================================== -->
+
+        <section class="service_section section_space_lg">
+          <div class="container">
+            <div class="section_heading text-center">
+              <h2 class="heading_subtitle text-uppercase">
+                <span class="double_icon">
+                  <i class="fas fa-sharp fa-square-full"></i>
+                  <i class="fas fa-sharp fa-square-full"></i>
+                </span>
+                <span>{{ setting.title }}</span>
+              </h2>
+              <h3 class="heading_title mb-0">
+                {{ setting.title }} - это:
+              </h3>
+            </div>
+
+            <div class="services_carousel">
+              <div class="row common_carousel_3col" data-slick='{"arrows": false, "autoplay:": false}'>
+                {% for benefit in benefits %}
+                <div class="col carousel_item">
+                  <div class="service_item style_1">
+                    
+                    <div class="item_content">
+                      <h3 class="item_title">
+                        {{ benefit.title }}
+                      </h3>
+                      <p class="item_description mb-0">
+                        {{ benefit.description }}
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+      
+        <!-- Review Section - Start
+        ================================================== -->
+        <section class="review_section section_space_lg bg_light">
+          <div class="container">
+            <div class="section_heading text-center">
+              <h2 class="heading_title mb-0">
+                Отзывы о нас
+              </h2>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col col-lg-7">
+                <div class="review_carousel_3 arrow_right_left">
+                  <div class="common_carousel_1col row" data-slick='{"dots": false}'>
+                    {% for review in reviews %}
+                    <div class="carousel_item col">
+                      <div class="review_item style_2 text-center">
+                        <h3 class="review_title">Best Customer Support</h3>
+                        <ul class="rating_star unordered_list">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                        </ul>
+                        <p class="review_content">
+                          {{ review.text }}
+                        </p>
+                        <span class="quote_icon">
+                          <img src="{% static 'assets/images/icons/icon_quote_dark.svg' %}" alt=" Icon Quote">
+                        </span>
+                        <div class="admin_item">
+                          <div class="admin_thumbnail">
+                            <img src="{{ review.image.url }}" alt="Admin Avatar">
+                          </div>
+                          <div class="admin_info">
+                            <h3 class="admin_name">{{ review.name }}</h3>
+                            <span class="admin_designation">{{ review.position }}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <ul class="carousel_arrow unordered_list_center">
+                    <li>
+                      <button type="button" class="cc1c_left_arrow">
+                        <i class="far fa-arrow-left"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="cc1c_right_arrow">
+                        <i class="far fa-arrow-right"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Review Section - End
+        ================================================== -->
+
+        <!-- Calltoaction Section - start
+        ================================================== -->
+        {% include 'include/client_form.html' %}   
+        <!-- Calltoaction Section - end
+        ================================================== -->
+
+      </main>
+      <!-- Main Body - End
+      ================================================== -->
+
+      <!-- Site Footer - Start
+      ================================================== -->
+      {% include 'include/footer.html' %}
+      <!-- Site Footer - End
+      ================================================== -->
+
+
+    </div>
+    <!-- Body Wrap - End -->
+
+{% endblock %}
